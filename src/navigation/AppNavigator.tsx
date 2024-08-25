@@ -3,15 +3,17 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '../Screens/HomeScreen';
 import SplashScreen from '../Screens/SplashScreen';
+import WelcomeScreen from '../Screens/WelcomeScreen';
 
 const AppNavigator = () => {
     const Stack = createNativeStackNavigator();
 
     return (
         <NavigationContainer>
-            <Stack.Navigator  screenOptions={{headerShown: false}}>
-                <Stack.Screen name="Splash" component={SplashScreen} options={{animation:'slide_from_bottom'}}/>
-                <Stack.Screen name="Home" component={HomeScreen} options={{animation:'slide_from_right'}}/>
+            <Stack.Navigator screenOptions={{ headerShown: false }}>
+                <Stack.Screen name="Splash" component={SplashScreen} options={{ animation: 'slide_from_bottom' }} />
+                <Stack.Screen name="Welcome" component={WelcomeScreen} options={{ animation: 'slide_from_bottom' }} />
+                <Stack.Screen name="Home" component={HomeScreen} options={{ animation: 'slide_from_right' }} />
             </Stack.Navigator>
         </NavigationContainer>
     )

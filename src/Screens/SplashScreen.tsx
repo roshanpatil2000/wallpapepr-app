@@ -5,8 +5,8 @@ import React, { useEffect } from 'react'
 const SplashScreen = ({navigation}:any) => {
   useEffect(() => {
     setTimeout(() => {
-      navigation.replace("Home")
-    }, 5000);
+      navigation.replace("Welcome")
+    }, 1500);
   }, [])
   
 
